@@ -1,0 +1,70 @@
+package rest.ankit;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+
+@Path("/helloworld")
+public class HelloWorld {
+	
+	
+
+	/*
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public Message HelloWorldHTML(){
+		return new Message("Hello World, Jersey");
+	}*/
+	
+	// This method is called if JSON is requested
+    /*@GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public Message getJSON() {        
+    	return new Message("Hello World, Jersey");
+    }
+	
+    
+    
+    @GET
+	@Produces({MediaType.TEXT_XML})
+	public Message getHelloWorldXML(){
+		return new Message("Hello World, Jersey");
+	}
+    */
+    //////////////////////////////////////
+    /*@GET
+    @Produces({MediaType.APPLICATION_XML})
+    public Todo getXML1() {
+        Todo todo = new Todo();
+        todo.setSummary("Application XML Todo Summary");
+        todo.setDescription("Application XML Todo Description");
+        return todo;
+    }*/
+	
+	@GET
+	@Produces({MediaType.TEXT_HTML})
+	public Message HelloWorldText(){
+		return new Message("Hello World, Jersey");
+	}
+
+    @GET
+	@Produces({MediaType.APPLICATION_XML})
+	public Message getXML(){
+		return new Message("Hello World, Jersey");
+	}
+
+    
+    // This method is called if JSON is requested
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public Message getJSON_Ankit() {
+        return new Message("Hello World, Jersey");
+    }
+    
+    
+    
+	
+
+}

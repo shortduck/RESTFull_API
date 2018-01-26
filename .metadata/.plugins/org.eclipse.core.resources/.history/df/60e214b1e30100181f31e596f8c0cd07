@@ -1,0 +1,29 @@
+package rest.ankit;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+
+@Path("/helloworld")
+public class HelloWorld {
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String HelloWorldText(){
+		return "Hello World, Jersey";
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_XML)
+	public String HelloWorldXML(){
+		return "<?xml version=\"1.0\"?>" + "<hello> Hello World, Jersey" + "</hello>";
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String HelloWorldHTML(){
+		return "<html>" + "<body> Hello World, Jersey" + "</body></html>";
+	}
+}

@@ -1,0 +1,36 @@
+package rest.ankit;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+
+@Path("/helloworld")
+public class HelloWorld {
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public Message HelloWorldText(){
+		return new Message("Hello World, Jersey");
+	}
+
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public Message HelloWorldHTML(){
+		return new Message("Hello World, Jersey");
+	}
+	
+	// This method is called if JSON is requested
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public Message getJSON() {        
+    	return new Message("Hello World, Jersey");
+    }
+	@GET
+	@Produces(MediaType.TEXT_XML)
+	public Message HelloWorldXML(){
+		return new Message("Hello World, Jersey");
+	}
+}
